@@ -1,0 +1,59 @@
+seed: 1234
+torch_home: ''
+froze: False
+ckpt_path: ''
+config_path: ''
+dataset:
+  name: 'ffpp_rela'
+  ffpp_rela:
+    data_root: ''
+    data_types:
+    compressions: 'c23'
+    num_frames: 50
+    methods: ['youtube', 'Deepfakes', 'Face2Face', 'FaceSwap', 'NeuralTextures']
+
+
+    has_mask: False
+    balance: True
+    relation_data: True
+  
+  celeb_df:
+    data_root: ''
+    num_frames: 5
+    methods: 'both'
+    control: True
+  
+  wild_deepfake:
+    root: ''
+    methods: "mix"
+    num_frames: 2
+
+
+  
+
+  
+
+
+
+transform:
+  image_size: 256
+  mean: [0.5, 0.5, 0.5]
+  std: [0.5, 0.5, 0.5]
+
+
+test:
+  batch_size: 64
+  threshold: 0.5
+
+
+
+wandb:
+  project: DFD
+  group: Final
+  job_type:
+  id:
+  resume:
+  save_code: True
+  name:
+  notes:
+

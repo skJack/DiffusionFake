@@ -1,0 +1,49 @@
+seed: 3407
+torch_home: ''
+froze: False
+ckpt_path: 
+dataset:
+  name: 'ffpp_rela'
+  ffpp_rela:
+    data_root: ''
+    data_types:
+    compressions: 'c23'
+    num_frames: 50
+    methods: ['youtube', 'Deepfakes', 'Face2Face', 'FaceSwap', 'NeuralTextures']
+    has_mask: False
+    balance: True
+    relation_data: True
+    similarity: True
+
+
+
+transform:
+  image_size: 256
+  mean: [0.5, 0.5, 0.5]
+  std: [0.5, 0.5, 0.5]
+
+
+train:
+  epochs: 30
+  batch_size: 16
+  print_interval: 100
+  val_interval: 1
+
+
+
+test:
+  batch_size: 1
+  threshold: 0.5
+
+
+
+wandb:
+  project: DFD
+  group: Final
+  job_type:
+  id:
+  resume:
+  save_code: True
+  name:
+  notes:
+
